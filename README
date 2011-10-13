@@ -1,0 +1,48 @@
+POSTFIX MANAGER - a simple ruby webservice to manage Postfix
+
+*******************************
+***** POSTFIX MANAGER WS ******
+*******************************
+
+#System requirements:
+- Postfix (2.5.5)
+
+***
+
+# Set up gem packages:
+# install all the gem packages required
+~> gem install bundler
+~> bundle install
+
+*** SETUP POSTFIX ***
+
+IMPORTANT:
+# Make sure postfix is running
+  ~> sudo postfix start  
+# Pesaje requires a privileged user to run postfix system commands. 
+# You configure this settings in the in the rackup file ~> 'config.ru'
+
+*** SETTING UP POSTFIX MANAGER WEBSEVER SERVER ***
+# install bundler packages
+~> gem install bundler
+~> bundle install
+
+# See all rake option with:
+~> rake -T
+
+*** Install ***
+
+# Setting up Postfix before running Pesaje:
+~> rake postfixmgr:install
+
+*** Running ***
+
+# Run server with:
+~> rake postfixmgr:server
+
+# The WebService is configured to listen in port '8080'
+# You can change this setting in the rackup file "config.ru"
+
+*** TEST, TEST, TEST.... (you know, just to make sure EVERYTHING is working)
+~> rake postfixmgr:spec
+NOTE: this might prompt you for your root password. In case you are wondering... this is needed to run some Postfix commands e.g. 'postfix reload'
