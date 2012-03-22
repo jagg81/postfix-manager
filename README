@@ -46,3 +46,9 @@ IMPORTANT:
 *** TEST, TEST, TEST.... (you know, just to make sure EVERYTHING is working)
 ~> rake postfixmgr:spec
 NOTE: this might prompt you for your root password. In case you are wondering... this is needed to run some Postfix commands e.g. 'postfix reload'
+
+*** License ***
+
+Open Source Initiative OSI - The MIT License (MIT):Licensing
+
+http://jorge.mit-license.org/
